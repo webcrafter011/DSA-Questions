@@ -11,7 +11,7 @@
 #                 current_count = 0
 #     return global_count
 
-
+# optimal solution 
 def consecutiveSeq(nums):
     st = set()
     longest = 1
