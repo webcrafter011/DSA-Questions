@@ -4,14 +4,9 @@ class ListNode:
         self.next = next
         
 def middle_node(head):
-    count = 0
-    current = head
-    while current:
-        count += 1
-        current = current.next
-    
-    mid = count // 2
-    current = head
-    for _ in range(mid):
-        current = current.next
-    return current 
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow
